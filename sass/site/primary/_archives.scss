@@ -10,7 +10,7 @@
 
 	.page-title {
 
-		color: $color__text-light;
+		color: $color__text-dark;
 		display: inline;
 		letter-spacing: normal;
 
@@ -27,7 +27,7 @@
 		&:after {
 			content: ".";
 			font-weight: bold;
-			color: $color__text-light;
+			color: $color__text-dark;
 		}
 	}
 }

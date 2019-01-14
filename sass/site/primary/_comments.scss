@@ -126,7 +126,7 @@
 	.trackback {
 
 		.comment-body {
-			color: $color__text-light;
+			color: $color__text-dark;
 			font-family: $font__heading;
 			font-size: $font__size-xs;
 			font-weight: 500;
@@ -142,7 +142,7 @@
 			}
 
 			.comment-edit-link {
-				color: $color__text-light;
+				color: $color__text-dark;
 				font-family: $font__heading;
 				font-weight: 500;
 			}
@@ -246,7 +246,7 @@
 		.comment-edit-link {
 			display: inline;
 			font-weight: 500;
-			color: $color__text-light;
+			color: $color__text-dark;
 			vertical-align: baseline;
 
 			time {
@@ -264,13 +264,13 @@
 		}
 
 		.edit-link-sep {
-			color: $color__text-light;
+			color: $color__text-dark;
 			margin: 0 0.2em;
 			vertical-align: baseline;
 		}
 
 		.edit-link {
-			color: $color__text-light;
+			color: $color__text-dark;
 
 			svg {
 				transform: scale(0.8);
@@ -374,7 +374,7 @@
 	label {
 		font-family: $font__heading;
 		font-size: $font__size-xs;
-		color: $color__text-light;
+		color: $color__text-dark;
 	}
 
 	.comment-form-author,

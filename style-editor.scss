@@ -192,7 +192,7 @@ figcaption,
 	font-family: $font__heading;
 	font-size: $font__size-xs;
 	line-height: 1.6;
-	color: $color__text-light;
+	color: $color__text-dark;
 }
 
 /** === Post Title === */
@@ -414,7 +414,7 @@ figcaption,
 		font-family: $font__heading;
 		font-size: $font__size-xs;
 		line-height: 1.6;
-		color: $color__text-light;
+		color: $color__text-dark;
 	}
 }
 
@@ -433,7 +433,7 @@ figcaption,
 	}
 
 	&:not(.is-style-solid-color) .wp-block-pullquote__citation {
-		color: $color__text-light;
+		color: $color__text-dark;
 	}
 
 	&.is-style-solid-color {
@@ -600,7 +600,7 @@ figcaption,
 .wp-block-table {
 
 	td, th {
-		border-color: $color__text-light;
+		border-color: $color__text-dark;
 	}
 }
 
@@ -609,7 +609,7 @@ figcaption,
 .wp-block-separator {
 
 	&:not(.is-style-dots) {
-		border-bottom: 2px solid $color__text-light;
+		border-bottom: 2px solid $color__text-dark;
 	}
 
 	&:not(.is-style-wide):not(.is-style-dots) {
@@ -618,7 +618,7 @@ figcaption,
 	}
 
 	&.is-style-dots:before {
-		color: $color__text-light;
+		color: $color__text-dark;
 		font-size: $font__size-lg;
 		letter-spacing: calc(2 * #{$size__spacing-unit});
 		padding-left: calc(2 * #{$size__spacing-unit});
@@ -651,7 +651,7 @@ ul.wp-block-archives,
 	}
 
 	li {
-		color: $color__text-light;
+		color: $color__text-dark;
 		font-family: $font__heading;
 		font-size: calc(#{$font__size_base} * #{$font__size-ratio});
 		font-weight: bold;
@@ -737,7 +737,7 @@ ul.wp-block-archives,
 /* Properly center-align captions in the classic-editor block */
 .wp-caption {
 	dd {
-		color: $color__text-light;
+		color: $color__text-dark;
  		font-size: $font__size-xs;
  		font-family: $font__heading;
  		line-height: $font__line-height-pre;
@@ -761,7 +761,7 @@ ul.wp-block-archives,
 			font-size: $font__size-xs;
 			font-style: normal;
 			line-height: 1.6;
-			color: $color__text-light;
+			color: $color__text-dark;
 		}
 	}
 }
