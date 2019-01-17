@@ -43,10 +43,9 @@
 
 .site-logo {
 
-	margin: 0 calc(#{$size__spacing-unit} / 2 ) calc(#{$size__spacing-unit} / 2 ) 0;
-
 	.custom-logo-link {
 		display: block;
+		margin: 0 calc(#{$size__spacing-unit} / 2 ) calc(#{$size__spacing-unit} / 2 ) 0;
 		transition: box-shadow $background_transition ease-in-out;
 
 		.custom-logo {

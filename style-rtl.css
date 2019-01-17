@@ -1567,7 +1567,7 @@ body.page .main-navigation {
 /* Social menu */
 .social-navigation {
   margin-top: calc(1rem / 2);
-  text-align: right;
+  width: 100%;
 }
 
 .social-navigation ul.social-links-menu {
@@ -2073,6 +2073,7 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   .site-description {
     margin: 0 0 0 0;
+    flex-basis: auto;
     width: auto;
   }
 }

@@ -1567,7 +1567,7 @@ body.page .main-navigation {
 /* Social menu */
 .social-navigation {
   margin-top: calc(1rem / 2);
-  text-align: left;
+  width: 100%;
 }
 
 .social-navigation ul.social-links-menu {
@@ -1999,12 +1999,9 @@ body.page .main-navigation {
   }
 }
 
-.site-logo {
-  margin: 0 calc(1rem / 2) calc(1rem / 2) 0;
-}
-
 .site-logo .custom-logo-link {
   display: block;
+  margin: 0 calc(1rem / 2) calc(1rem / 2) 0;
   transition: box-shadow 200ms ease-in-out;
 }
 
