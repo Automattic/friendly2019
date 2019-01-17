@@ -44,8 +44,8 @@
 
 	.entry-title {
 
-		@include post-section-dash;
 		margin: 0;
+		text-align: center;
 
 		a {
 			color: inherit;
@@ -91,20 +91,17 @@
 		}
 	}
 
-	.entry-meta {
-		margin: $size__spacing-unit 0;
-	}
-
+	.entry-meta,
 	.entry-footer {
 
 		margin: calc(2 * #{$size__spacing-unit}) $size__spacing-unit $size__spacing-unit;
 
 		@include media(tablet) {
-			margin: $size__spacing-unit $size__site-margins calc(3 * #{$size__spacing-unit});
+			margin: $size__spacing-unit auto calc(3 * #{$size__spacing-unit});
 			max-width: $size__site-tablet-content;
 		}
 
-		@include media(tablet) {
+		@include media(desktop) {
 			max-width: $size__site-desktop-content;
 		}
 	}
@@ -229,6 +226,16 @@
 			}
 		}
 
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			margin: $size__spacing-unit auto;
+			text-align: center;
+		}
+
 		// Overwrite iframe embeds that have inline styles.
 		> iframe[style] {
 
@@ -281,7 +288,6 @@
 	}
 
 	.author-title {
-		@include post-section-dash;
 		display: inline;
 	}
 

@@ -30,6 +30,8 @@
 .site-branding {
 
 	color: $color__text-dark;
+	display: flex;
+	flex-wrap: wrap;
 	position: relative;
 
 	@include media(tablet) {
@@ -41,41 +43,27 @@
 
 .site-logo {
 
-	position: relative;
-	z-index: 999;
-	margin-bottom: calc(.66 * #{$size__spacing-unit});
-
-	@include media(tablet) {
-		margin-bottom: 0;
-		position: absolute;
-		right: calc(100% + (1.25 * #{$size__spacing-unit}));
-		top: 4px; // Accounts for box-shadow widths
-		z-index: 999;
-	}
+	margin: 0 calc(#{$size__spacing-unit} / 2 ) calc(#{$size__spacing-unit} / 2 ) 0;
 
 	.custom-logo-link {
-		border-radius: 100%;
-		box-sizing: content-box;
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 		display: block;
-		width: 50px;
-		height: 50px;
-		overflow: hidden;
 		transition: box-shadow $background_transition ease-in-out;
 
 		.custom-logo {
-			min-height: inherit;
+			display: block;
+			width: auto;
+			max-height: 250px;
 		}
 
 		&:hover,
 		&:active,
 		&:focus {
-			box-shadow: 0 0 0 2px rgba(0, 0, 0, 1);
+
 		}
 
 		@include media(tablet) {
-			width: 64px;
-			height: 64px;
+			width: auto;
+			max-height: 250px;
 		}
 	}
 }
@@ -83,9 +71,13 @@
 // Site title
 
 .site-title {
-	margin: auto;
-	display: inline;
+
+	align-self: center;
 	color: $color__text-dark;
+	flex-basis: 10rem;
+	flex-grow: 1;
+	margin: 0 calc(#{$size__spacing-unit} / 2 ) 0 0;
+	width: 100%;
 
 	a {
 		color: $color__text-dark;
@@ -113,8 +105,8 @@
 		display: block;
 	}
 
-	@include media(tablet) {
-		display: inline;
+	@include media(desktop) {
+		width: auto;
 	}
 }
 
@@ -122,8 +114,21 @@
 
 .site-description {
 
+	align-self: center;
 	display: inline;
 	color: $color__text-dark;
 	font-weight: normal;
-	margin: 0;
+	width: 100%;
+	flex-basis: 100%;
+	
+	&:nth-child(2) {
+		margin: 0;
+	}
+	
+	@include media(tablet) {
+		margin: 0 0 0 0;
+		flex-basis: auto;
+		width: auto;
+		
+	}
 }

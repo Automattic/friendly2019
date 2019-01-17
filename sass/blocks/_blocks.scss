@@ -2,13 +2,13 @@
 
 .entry .entry-content > *,
 .entry .entry-summary > * {
-	margin: 32px 0;
+	margin: 32px auto;
 	max-width: 100%;
 
 	@include postContentMaxWidth();
 
 	@include media(tablet) {
-		margin: 32px 0;
+		margin: 32px auto;
 	}
 
 	> *:first-child {
@@ -84,10 +84,6 @@
 
 		@include postContentMaxWidth();
 
-		@include media(tablet) {
-			margin-left: 0;
-			margin-right: 0;
-		}
 	}
 }
 
@@ -142,14 +138,6 @@
 			@include media(wide) {
 				max-width: (0.33 * $desktop_width);
 			}
-		}
-	}
-
-	//! Video
-	.wp-block-video {
-
-		video {
-			width: 100%;
 		}
 	}
 
@@ -473,7 +461,7 @@
 
 		&.is-large,
 		&.is-style-large {
-			margin: $size__spacing-unit 0;
+			margin: $size__spacing-unit auto;
 			padding: 0;
 			border-left: none;
 
@@ -493,8 +481,6 @@
 			}
 
 			@include media(tablet) {
-				margin: $size__spacing-unit 0;
-				padding: $size__spacing-unit 0;
 
 				p {
 					font-size: $font__size-lg;
@@ -505,7 +491,6 @@
 
 	//! Image
 	.wp-block-image {
-		max-width: 100%;
 
 		img {
 			display: block;
@@ -586,7 +571,7 @@
 			.wp-block-cover-image-text,
 			.wp-block-cover-text,
 			h2 {
-				@include postContentMaxWidth();
+				max-width: 100%;
 			}
 
 			@include media(tablet) {
@@ -636,11 +621,9 @@
 	hr {
 		background-color: $color__text-main;
 		border: 0;
-		height: 2px;
-		margin-bottom: (2 * $size__spacing-unit);
-		margin-top: (2 * $size__spacing-unit);
-		max-width: 2.25em;
-		text-align: left;
+		height: 3px;
+		margin: (2 * $size__spacing-unit) auto;
+		max-width: 10rem;
 
 		&.is-style-wide {
 			max-width: 100%;

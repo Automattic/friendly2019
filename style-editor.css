@@ -50,6 +50,8 @@ body .wp-block[data-align="full"] {
 .wp-block {
   width: calc(100vw - (2 * 1rem));
   max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media only screen and (min-width: 768px) {
@@ -88,19 +90,11 @@ h5,
 h6 {
   font-family: "Rubik", Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
   font-weight: 700;
+  text-align: center;
 }
 
 h1 {
   font-size: 2.25em;
-}
-
-h1:before {
-  background: #3c2323;
-  content: "\020";
-  display: block;
-  height: 2px;
-  margin: 1rem 0;
-  width: 1em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -111,15 +105,6 @@ h1:before {
 
 h2 {
   font-size: 1.6875em;
-}
-
-h2:before {
-  background: #3c2323;
-  content: "\020";
-  display: block;
-  height: 2px;
-  margin: 1rem 0;
-  width: 1em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -227,15 +212,6 @@ figcaption,
 
 /** === Post Title === */
 .editor-post-title__block:before {
-  background: #3c2323;
-  content: "\020";
-  display: block;
-  height: 2px;
-  margin: 1rem 0;
-  width: 1em;
-}
-
-.editor-post-title__block:before {
   width: 2.8125em;
   margin-top: 0;
   margin-bottom: 0;
@@ -248,6 +224,7 @@ figcaption,
   font-family: "Rubik", Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
   font-size: 2.8125em;
   font-weight: 700;
+  text-align: center;
 }
 
 /** === Default Appender === */
@@ -341,7 +318,7 @@ figcaption,
   .wp-block[data-type="core/cover"][data-align="wide"] .wp-block-cover-text,
   .wp-block[data-type="core/cover"][data-align="full"] h2,
   .wp-block[data-type="core/cover"][data-align="full"] .wp-block-cover-text {
-    max-width: calc(8 * (100vw / 12));
+    max-width: 100%;
   }
 }
 
@@ -350,7 +327,7 @@ figcaption,
   .wp-block[data-type="core/cover"][data-align="wide"] .wp-block-cover-text,
   .wp-block[data-type="core/cover"][data-align="full"] h2,
   .wp-block[data-type="core/cover"][data-align="full"] .wp-block-cover-text {
-    max-width: calc(6 * (100vw / 12));
+    max-width: 100%;
   }
 }
 
@@ -619,12 +596,14 @@ figcaption,
 
 /** === Separator === */
 .wp-block-separator:not(.is-style-dots) {
-  border-bottom: 2px solid #0d1b24;
+  background-color: #3c2323;
+  border: 0;
+  height: 3px;
 }
 
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
-  width: 2.25em;
-  margin-left: 0;
+  margin: 2rem auto;
+  max-width: 10rem;
 }
 
 .wp-block-separator.is-style-dots:before {
