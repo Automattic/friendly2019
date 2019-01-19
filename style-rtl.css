@@ -995,6 +995,7 @@ a:focus {
 --------------------------------------------------------------*/
 /** === Main menu === */
 .main-navigation {
+  display: block;
   margin-top: 0.25rem;
   width: 100%;
   /* Un-style buttons */
@@ -1955,7 +1956,7 @@ body.page .main-navigation {
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-  padding: 1em;
+  padding: 2rem 1rem 1rem;
 }
 
 .site-header.featured-image {
@@ -1972,7 +1973,7 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   .site-header {
     margin: 0;
-    padding: 3rem 0;
+    padding: 2rem 0 1rem;
   }
   .site-header.featured-image {
     min-height: 100vh;
@@ -1981,9 +1982,11 @@ body.page .main-navigation {
 }
 
 .site-branding {
+  align-items: center;
   color: #0d1b24;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   position: relative;
 }
 
@@ -1994,35 +1997,24 @@ body.page .main-navigation {
 }
 
 .site-logo {
-  margin: 0 0 calc(1rem / 2) calc(1rem / 2);
+  margin-left: 1rem;
 }
 
 .site-logo .custom-logo-link {
-  display: block;
-  transition: box-shadow 200ms ease-in-out;
+  box-sizing: content-box;
+  overflow: hidden;
 }
 
 .site-logo .custom-logo-link .custom-logo {
   display: block;
+  max-height: 60px;
   width: auto;
-  max-height: 250px;
-}
-
-@media only screen and (min-width: 768px) {
-  .site-logo .custom-logo-link {
-    width: auto;
-    max-height: 250px;
-  }
 }
 
 .site-title {
-  align-self: center;
-  color: #0d1b24;
-  flex-basis: 10rem;
-  flex-grow: 1;
-  margin: 0 0 0 calc(1rem / 2);
-  width: 100%;
-  /* When there is no description set, make sure navigation appears below title. */
+  color: #3c2323;
+  flex: 1 1 auto;
+  margin: calc(1rem / 2) 0 calc(1rem / 2) 1rem;
 }
 
 .site-title a {
@@ -2047,35 +2039,12 @@ body.page .main-navigation {
   }
 }
 
-.site-title + .main-navigation {
-  display: block;
-}
-
-@media only screen and (min-width: 1168px) {
-  .site-title {
-    width: auto;
-  }
-}
-
 .site-description {
-  align-self: center;
-  display: inline;
+  flex: initial;
   color: #0d1b24;
+  font-size: 0.71111em;
   font-weight: normal;
-  width: 100%;
-  flex-basis: 100%;
-}
-
-.site-description:nth-child(2) {
-  margin: 0;
-}
-
-@media only screen and (min-width: 768px) {
-  .site-description {
-    margin: 0 0 0 0;
-    flex-basis: auto;
-    width: auto;
-  }
+  margin: calc(1rem / 2) 0;
 }
 
 .site-header.featured-image {
@@ -4208,7 +4177,7 @@ body.page .main-navigation {
 
 .entry .entry-content .wp-block-media-text .wp-block-media-text__content a,
 .entry .entry-content .wp-block-media-text .wp-block-media-text__content a:hover {
-  color: #fff;
+  color: inherit;
 }
 
 .entry .entry-content .wp-block-media-text .wp-block-media-text__content :last-child {

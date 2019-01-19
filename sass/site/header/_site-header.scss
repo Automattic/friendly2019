@@ -1,7 +1,7 @@
 // Site header
 
 .site-header {
-	padding: 1em;
+	padding: 2rem 1rem 1rem;
 
 	&.featured-image {
 		display: flex;
@@ -16,7 +16,7 @@
 
 	@include media(tablet) {
 		margin: 0;
-		padding: 3rem 0;
+		padding: 2rem 0 1rem;
 
 		&.featured-image {
 			min-height: 100vh;
@@ -29,9 +29,11 @@
 
 .site-branding {
 
+	align-items: center;
 	color: $color__text-dark;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	position: relative;
 
 	@include media(tablet) {
@@ -42,27 +44,17 @@
 // Site logo
 
 .site-logo {
+	margin-right: $size__spacing-unit;
 
 	.custom-logo-link {
-		display: block;
-		margin: 0 calc(#{$size__spacing-unit} / 2 ) calc(#{$size__spacing-unit} / 2 ) 0;
-		transition: box-shadow $background_transition ease-in-out;
+
+		box-sizing: content-box;
+		overflow: hidden;
 
 		.custom-logo {
 			display: block;
+			max-height: 60px;
 			width: auto;
-			max-height: 250px;
-		}
-
-		&:hover,
-		&:active,
-		&:focus {
-
-		}
-
-		@include media(tablet) {
-			width: auto;
-			max-height: 250px;
 		}
 	}
 }
@@ -71,12 +63,9 @@
 
 .site-title {
 
-	align-self: center;
-	color: $color__text-dark;
-	flex-basis: 10rem;
-	flex-grow: 1;
-	margin: 0 calc(#{$size__spacing-unit} / 2 ) 0 0;
-	width: 100%;
+	color: $color__text-main;
+	flex: 1 1 auto;
+	margin: calc(#{$size__spacing-unit} / 2 ) $size__spacing-unit calc(#{$size__spacing-unit} / 2 ) 0;
 
 	a {
 		color: $color__text-dark;
@@ -98,36 +87,15 @@
 			display: inline-block;
 		}
 	}
-
-	/* When there is no description set, make sure navigation appears below title. */
-	+ .main-navigation {
-		display: block;
-	}
-
-	@include media(desktop) {
-		width: auto;
-	}
 }
 
 // Site description
 
 .site-description {
 
-	align-self: center;
-	display: inline;
+	flex: initial;
 	color: $color__text-dark;
+	font-size: $font__size-xs;
 	font-weight: normal;
-	width: 100%;
-	flex-basis: 100%;
-	
-	&:nth-child(2) {
-		margin: 0;
-	}
-	
-	@include media(tablet) {
-		margin: 0 0 0 0;
-		flex-basis: auto;
-		width: auto;
-		
-	}
+	margin: calc(#{$size__spacing-unit} / 2 ) 0;
 }
