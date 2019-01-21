@@ -3,33 +3,25 @@
 // Singular navigation
 .post-navigation {
 
-	margin: calc(3 * 1rem) 0;
+	margin: calc(3 * #{$size__spacing-unit}) $size__spacing-unit;
 
 	@include media(tablet) {
-		margin: calc(3 * 1rem) $size__site-margins;
-		max-width: calc(6 * (100vw / 12));
+		margin: calc(3 * #{$size__spacing-unit}) auto;
+		max-width: $size__site-tablet-content;
 	}
 
 	@include media(desktop) {
-		margin: calc(3 * 1rem) 0;
-		max-width: 100%;
+		max-width: $size__site-desktop-content;
 	}
 
 	.nav-links {
 
-		margin: 0 $size__spacing-unit;
 		max-width: 100%;
 		display: flex;
 		flex-direction: column;
 
 		@include media(tablet) {
-			margin: 0;
-		}
-
-		@include media(desktop) {
 			flex-direction: row;
-			margin: 0 $size__site-margins;
-			max-width: $size__site-desktop-content;
 		}
 
 		a {
@@ -56,20 +48,8 @@
 			}
 		}
 
-		.nav-previous,
-		.nav-next {
-
-			@include media(desktop) {
-				min-width: calc(50% - 2 * #{$size__spacing-unit});
-			}
-		}
-
 		.nav-previous {
 			order: 2;
-
-			@include media(desktop) {
-				order: 1;
-			}
 
 			+ .nav-next {
 				margin-bottom: $size__spacing-unit;
@@ -83,11 +63,10 @@
 		}
 
 		.nav-next {
-			order: 1;
-
-			@include media(desktop) {
+			@include media(tablet) {
 				order: 2;
 				padding-left: $size__spacing-unit;
+				margin-left: auto;
 			}
 
 			.meta-nav {
@@ -196,6 +175,6 @@
 	}
 
 	.nav-next {
-		text-align: right;
+		margin-left: auto;
 	}
 }

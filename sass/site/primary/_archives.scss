@@ -2,17 +2,17 @@
 .search .page-header,
 .error404 .page-header {
 
-	margin: $size__spacing-unit $size__spacing-unit calc(3 * #{$size__spacing-unit});
+	margin: calc(3 * #{ $size__spacing-unit}) $size__spacing-unit $size__spacing-unit;
 
 	@include media(tablet) {
-		margin: 0 $size__site-margins $size__site-margins;
+		margin: calc(3 * #{ $size__spacing-unit}) $size__site-margins $size__spacing-unit;
 	}
 
 	.page-title {
 
 		color: $color__text-dark;
-		display: inline;
 		letter-spacing: normal;
+		text-align: center;
 
 		&:before {
 			display: none;
@@ -23,6 +23,7 @@
 	.page-description {
 		display: inherit;
 		clear: both;
+		text-align: center;
 
 		&:after {
 			content: ".";
@@ -55,7 +56,12 @@
 		margin: calc(3 * #{$size__spacing-unit}) #{$size__spacing-unit};
 
 		@include media(tablet) {
-			margin: calc(3 * #{$size__spacing-unit}) $size__site-margins calc(#{ $size__spacing-unit } / 2);
+			margin: calc(3 * #{$size__spacing-unit}) auto calc(#{ $size__spacing-unit } / 2);
+			max-width: $size__site-tablet-content;
+		}
+
+		@include media(desktop) {
+			max-width: $size__site-desktop-content;
 		}
 	}
 

@@ -1652,25 +1652,23 @@ body.page .main-navigation {
 --------------------------------------------------------------*/
 /* Next/Previous navigation */
 .post-navigation {
-  margin: calc(3 * 1rem) 0;
+  margin: calc(3 * 1rem) 1rem;
 }
 
 @media only screen and (min-width: 768px) {
   .post-navigation {
-    margin: calc(3 * 1rem) calc(10% + 60px);
-    max-width: calc(6 * (100vw / 12));
+    margin: calc(3 * 1rem) auto;
+    max-width: calc(8 * (100vw / 12) - 28px);
   }
 }
 
 @media only screen and (min-width: 1168px) {
   .post-navigation {
-    margin: calc(3 * 1rem) 0;
-    max-width: 100%;
+    max-width: calc(6 * (100vw / 12) - 28px);
   }
 }
 
 .post-navigation .nav-links {
-  margin: 0 1rem;
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -1678,15 +1676,7 @@ body.page .main-navigation {
 
 @media only screen and (min-width: 768px) {
   .post-navigation .nav-links {
-    margin: 0;
-  }
-}
-
-@media only screen and (min-width: 1168px) {
-  .post-navigation .nav-links {
     flex-direction: row;
-    margin: 0 calc(10% + 60px);
-    max-width: calc(6 * (100vw / 12) - 28px);
   }
 }
 
@@ -1711,21 +1701,8 @@ body.page .main-navigation {
   color: #133a24;
 }
 
-@media only screen and (min-width: 1168px) {
-  .post-navigation .nav-links .nav-previous,
-  .post-navigation .nav-links .nav-next {
-    min-width: calc(50% - 2 * 1rem);
-  }
-}
-
 .post-navigation .nav-links .nav-previous {
   order: 2;
-}
-
-@media only screen and (min-width: 1168px) {
-  .post-navigation .nav-links .nav-previous {
-    order: 1;
-  }
 }
 
 .post-navigation .nav-links .nav-previous + .nav-next {
@@ -1736,14 +1713,11 @@ body.page .main-navigation {
   display: inline;
 }
 
-.post-navigation .nav-links .nav-next {
-  order: 1;
-}
-
-@media only screen and (min-width: 1168px) {
+@media only screen and (min-width: 768px) {
   .post-navigation .nav-links .nav-next {
     order: 2;
     padding-left: 1rem;
+    margin-left: auto;
   }
 }
 
@@ -1838,7 +1812,7 @@ body.page .main-navigation {
 }
 
 .comment-navigation .nav-next {
-  text-align: right;
+  margin-left: auto;
 }
 
 /* Accessibility */
@@ -2190,6 +2164,7 @@ body.page .main-navigation {
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
+  text-align: center;
   /* Entry meta */
 }
 
@@ -2423,6 +2398,7 @@ body.page .main-navigation {
 .entry .entry-footer {
   color: #0d1b24;
   font-weight: 500;
+  text-align: center;
 }
 
 .entry .entry-meta > span,
@@ -2681,13 +2657,13 @@ body.page .main-navigation {
 
 @media only screen and (min-width: 768px) {
   .author-bio {
-    margin: calc(3 * 1rem) calc(10% + 60px);
+    margin: calc(3 * 1rem) auto;
   }
 }
 
 @media only screen and (min-width: 1168px) {
   .author-bio {
-    margin: calc(3 * 1rem) calc(10% + 60px);
+    margin: calc(3 * 1rem) auto;
   }
 }
 
@@ -3116,14 +3092,14 @@ body.page .main-navigation {
 .archive .page-header,
 .search .page-header,
 .error404 .page-header {
-  margin: 1rem 1rem calc(3 * 1rem);
+  margin: calc(3 * 1rem) 1rem 1rem;
 }
 
 @media only screen and (min-width: 768px) {
   .archive .page-header,
   .search .page-header,
   .error404 .page-header {
-    margin: 0 calc(10% + 60px) calc(10% + 60px);
+    margin: calc(3 * 1rem) calc(10% + 60px) 1rem;
   }
 }
 
@@ -3131,8 +3107,8 @@ body.page .main-navigation {
 .search .page-header .page-title,
 .error404 .page-header .page-title {
   color: #0d1b24;
-  display: inline;
   letter-spacing: normal;
+  text-align: center;
 }
 
 .archive .page-header .page-title:before,
@@ -3149,6 +3125,7 @@ body.page .main-navigation {
 .error404 .page-header .page-description {
   display: inherit;
   clear: both;
+  text-align: center;
 }
 
 .archive .page-header .search-term:after,
@@ -3183,7 +3160,15 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   .error-404.not-found .page-content,
   .no-results.not-found .page-content {
-    margin: calc(3 * 1rem) calc(10% + 60px) calc(1rem / 2);
+    margin: calc(3 * 1rem) auto calc(1rem / 2);
+    max-width: calc(8 * (100vw / 12) - 28px);
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+  .error-404.not-found .page-content,
+  .no-results.not-found .page-content {
+    max-width: calc(6 * (100vw / 12) - 28px);
   }
 }
 
