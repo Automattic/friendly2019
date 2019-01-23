@@ -10,6 +10,7 @@ Twenty Nineteen Editor Styles
 /** === Editor Frame === */
 
 body {
+	background: $color__background-body;
 
 	.wp-block[data-align="full"] {
 		width: 100%;
@@ -594,6 +595,24 @@ figcaption,
 
 .wp-block-code {
 	border-radius: 0;
+}
+
+/** === Media & Text === */
+
+.wp-block[data-type="core/media-text"] .wp-block-media-text {
+
+	background: $color__background-screen;
+	border-radius: 3px;
+	overflow: hidden;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		text-align: left;
+	}
 }
 
 /** === Table === */

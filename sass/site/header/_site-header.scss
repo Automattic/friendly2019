@@ -1,7 +1,7 @@
 // Site header
 
 .site-header {
-	padding: 2rem 1rem 1rem;
+	padding: 1.25rem 1rem .75rem;
 
 	&.featured-image {
 		display: flex;
@@ -16,7 +16,7 @@
 
 	@include media(tablet) {
 		margin: 0;
-		padding: 2rem 0 1rem;
+		padding: 2.5rem 0 1.5rem;
 
 		&.featured-image {
 			min-height: 100vh;
@@ -44,7 +44,9 @@
 // Site logo
 
 .site-logo {
-	margin-right: $size__spacing-unit;
+	display: inherit;
+	margin-right: #{0.7 * $size__spacing-unit};
+	max-height: 90px;
 
 	.custom-logo-link {
 
@@ -53,7 +55,7 @@
 
 		.custom-logo {
 			display: block;
-			max-height: 60px;
+			max-height: 180px;
 			width: auto;
 		}
 	}
@@ -65,7 +67,7 @@
 
 	color: $color__text-main;
 	flex: 1 1 auto;
-	margin: calc(#{$size__spacing-unit} / 2 ) $size__spacing-unit calc(#{$size__spacing-unit} / 2 ) 0;
+	margin: 0 #{0.7 * $size__spacing-unit} 0 0;
 
 	a {
 		color: $color__text-dark;
@@ -97,5 +99,5 @@
 	color: $color__text-dark;
 	font-size: $font__size-xs;
 	font-weight: normal;
-	margin: calc(#{$size__spacing-unit} / 2 ) 0;
+	margin: 14px 0 0;
 }

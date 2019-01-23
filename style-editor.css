@@ -10,6 +10,10 @@ Twenty Nineteen Editor Styles
 /* Calculates maximum width for post content */
 /* Nested sub-menu padding: 10 levels deep */
 /** === Editor Frame === */
+body {
+  background: #fffdf6;
+}
+
 body .wp-block[data-align="full"] {
   width: 100%;
 }
@@ -587,6 +591,22 @@ figcaption,
 /** === Code === */
 .wp-block-code {
   border-radius: 0;
+}
+
+/** === Media & Text === */
+.wp-block[data-type="core/media-text"] .wp-block-media-text {
+  background: #fdf9ec;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.wp-block[data-type="core/media-text"] .wp-block-media-text h1,
+.wp-block[data-type="core/media-text"] .wp-block-media-text h2,
+.wp-block[data-type="core/media-text"] .wp-block-media-text h3,
+.wp-block[data-type="core/media-text"] .wp-block-media-text h4,
+.wp-block[data-type="core/media-text"] .wp-block-media-text h5,
+.wp-block[data-type="core/media-text"] .wp-block-media-text h6 {
+  text-align: left;
 }
 
 /** === Table === */

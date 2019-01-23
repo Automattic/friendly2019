@@ -98,16 +98,15 @@
 
 		.entry-header {
 
-			margin-top: calc( 4 * #{$size__spacing-unit});
-			margin-bottom: 0;
-			margin-left: 0;
-			margin-right: 0;
-			text-align: center;
+			margin: calc(4 * #{$size__spacing-unit}) 0 0;
 
-			@include media (tablet) {
+			@include media(tablet) {
+				margin: calc(4 * #{$size__spacing-unit}) auto 0;
+				max-width: $size__site-tablet-content;
+			}
 
-				margin-left: $size__site-margins;
-				margin-right: $size__site-margins;
+			@include media(desktop) {
+				max-width: $size__site-desktop-content;
 			}
 
 			.entry-title {
