@@ -30,6 +30,14 @@
   font-family: "Rubik", Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
 }
 
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
+  text-align: left;
+}
+
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
+  font-weight: 700;
+}
+
 .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title,
 .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
   font-family: "Rubik", Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;

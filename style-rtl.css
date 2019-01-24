@@ -2004,12 +2004,6 @@ body.page .main-navigation {
   color: #4a4a4a;
 }
 
-@media only screen and (min-width: 768px) {
-  .featured-image .site-title {
-    display: inline-block;
-  }
-}
-
 .site-description {
   flex: initial;
   color: #0d1b24;

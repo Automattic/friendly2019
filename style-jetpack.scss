@@ -35,6 +35,14 @@
 	font-family: $font__heading;
 }
 
+.entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title {
+	text-align: left;
+
+	a {
+		font-weight: 700;
+	}
+}
+
 .entry #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title,
 .entry #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post {
 	font-family: $font__body;
