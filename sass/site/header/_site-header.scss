@@ -44,6 +44,7 @@
 // Site logo
 
 .site-logo {
+
 	display: inherit;
 	margin-right: #{0.7 * $size__spacing-unit};
 	max-height: 90px;
@@ -79,14 +80,6 @@
 
 		&:hover {
 			color: $color__text-hover;
-		}
-	}
-
-	.featured-image & {
-		margin: 0;
-
-		@include media(tablet) {
-			display: inline-block;
 		}
 	}
 }
