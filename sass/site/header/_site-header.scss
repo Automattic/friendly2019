@@ -47,7 +47,6 @@
 
 	display: inherit;
 	margin-right: #{0.7 * $size__spacing-unit};
-	max-height: 90px;
 
 	.custom-logo-link {
 
@@ -56,8 +55,12 @@
 
 		.custom-logo {
 			display: block;
-			max-height: 180px;
 			width: auto;
+			max-height: 64px;
+
+			@include media(tablet) {
+				max-height: 90px;
+			}
 		}
 	}
 }

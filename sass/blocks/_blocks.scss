@@ -724,10 +724,13 @@
 	//! Media & Text
 	.wp-block-media-text {
 		background: $color__background-screen;
-		border-radius: 4px;
 		color: $color__text-main;
 		overflow: hidden;
 		position: relative;
+
+		&:not(.alignfull) {
+			border-radius: 4px;
+		}
 
 		.wp-block-media-text__content {
 			padding-left: 1rem;

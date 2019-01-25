@@ -1978,7 +1978,6 @@ body.page .main-navigation {
 .site-logo {
   display: inherit;
   margin-right: 0.7rem;
-  max-height: 90px;
 }
 
 .site-logo .custom-logo-link {
@@ -1988,8 +1987,14 @@ body.page .main-navigation {
 
 .site-logo .custom-logo-link .custom-logo {
   display: block;
-  max-height: 180px;
   width: auto;
+  max-height: 64px;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-logo .custom-logo-link .custom-logo {
+    max-height: 90px;
+  }
 }
 
 .site-title {
@@ -2366,18 +2371,27 @@ body.page .main-navigation {
 .entry .entry-header {
   margin: calc(3 * 1rem) 1rem 1rem;
   position: relative;
-  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
   .entry .entry-header {
-    margin: calc(3 * 1rem) calc(10% + 60px) 1rem;
+    margin: calc(3 * 1rem) auto 1rem;
+    max-width: calc(8 * (100vw / 12) - 28px);
   }
+}
+
+@media only screen and (min-width: 1168px) {
+  .entry .entry-header {
+    max-width: calc(6 * (100vw / 12) - 28px);
+  }
+}
+
+.entry.post .entry-header {
+  text-align: center;
 }
 
 .entry .entry-title {
   margin: 0;
-  text-align: center;
 }
 
 .entry .entry-title a {
@@ -2443,6 +2457,11 @@ body.page .main-navigation {
   .entry .entry-footer {
     max-width: calc(6 * (100vw / 12) - 28px);
   }
+}
+
+.entry.post .entry-meta,
+.entry.post .entry-footer {
+  text-align: center;
 }
 
 .entry .post-thumbnail {
@@ -2583,13 +2602,12 @@ body.page .main-navigation {
   cursor: pointer;
 }
 
-.entry .entry-content h1,
-.entry .entry-content h2,
-.entry .entry-content h3,
-.entry .entry-content h4,
-.entry .entry-content h5,
-.entry .entry-content h6 {
-  margin: 32px auto;
+.entry .entry-content > h1,
+.entry .entry-content > h2,
+.entry .entry-content > h3,
+.entry .entry-content > h4,
+.entry .entry-content > h5,
+.entry .entry-content > h6 {
   text-align: center;
 }
 
@@ -3136,12 +3154,6 @@ body.page .main-navigation {
   display: block;
   color: #3c2323;
   font-size: 1em;
-}
-
-@media only screen and (min-width: 768px) {
-  .hfeed .entry .entry-header {
-    margin: calc(3 * 1rem) calc(10% + 60px) calc(1rem / 2);
-  }
 }
 
 /* 404 & Not found */
@@ -4158,10 +4170,13 @@ body.page .main-navigation {
 
 .entry .entry-content .wp-block-media-text {
   background: #fdf9ec;
-  border-radius: 4px;
   color: #3c2323;
   overflow: hidden;
   position: relative;
+}
+
+.entry .entry-content .wp-block-media-text:not(.alignfull) {
+  border-radius: 4px;
 }
 
 .entry .entry-content .wp-block-media-text .wp-block-media-text__content {

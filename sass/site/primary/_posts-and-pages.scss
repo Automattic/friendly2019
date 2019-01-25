@@ -36,17 +36,24 @@
 
 		margin: calc(3 * #{ $size__spacing-unit}) $size__spacing-unit $size__spacing-unit;
 		position: relative;
-		text-align: center;
 
 		@include media(tablet) {
-			margin: calc(3 * #{ $size__spacing-unit}) $size__site-margins $size__spacing-unit;
+			margin: calc(3 * #{ $size__spacing-unit}) auto $size__spacing-unit;
+			max-width: $size__site-tablet-content;
 		}
+
+		@include media(desktop) {
+			max-width: $size__site-desktop-content;
+		}
+	}
+
+	&.post .entry-header {
+		text-align: center;
 	}
 
 	.entry-title {
 
 		margin: 0;
-		text-align: center;
 
 		a {
 			color: inherit;
@@ -104,6 +111,13 @@
 
 		@include media(desktop) {
 			max-width: $size__site-desktop-content;
+		}
+	}
+
+	&.post {
+		.entry-meta,
+		.entry-footer {
+			text-align: center;
 		}
 	}
 
@@ -227,13 +241,12 @@
 			}
 		}
 
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			margin: 32px auto;
+		> h1,
+		> h2,
+		> h3,
+		> h4,
+		> h5,
+		> h6 {
 			text-align: center;
 		}
 

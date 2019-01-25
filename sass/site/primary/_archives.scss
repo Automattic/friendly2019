@@ -39,13 +39,6 @@
 	font-size: 1em;
 }
 
-.hfeed .entry .entry-header {
-
-	@include media(tablet) {
-		margin: calc(3 * #{$size__spacing-unit}) $size__site-margins calc(#{ $size__spacing-unit } / 2);
-	}
-}
-
 /* 404 & Not found */
 
 .error-404.not-found,

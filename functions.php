@@ -25,8 +25,8 @@ function friendly2019_setup() {
 	add_theme_support(
 		'custom-logo',
 		array(
-			'height'      => 120,
-			'width'       => 190,
+			'height'      => 180,
+			'width'       => 180,
 			'flex-width'  => true,
 			'flex-height' => false,
 			'header-text' => array( 'site-title' ),
@@ -85,6 +85,7 @@ function friendly2019_block_editor_scripts() {
 	/**
 	 * Block Editor Scripts
 	 */
+	wp_enqueue_style( 'friendly2019-fonts', friendly2019_fonts_url(), array(), null );
 	wp_enqueue_script( 'friendly2019-block-editor-filters', get_theme_file_uri( '/js/block-editor-filters.js' ), array(), '1.0', true );
 }
 add_action( 'enqueue_block_editor_assets', 'friendly2019_block_editor_scripts' );
