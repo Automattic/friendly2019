@@ -599,19 +599,33 @@ figcaption,
 
 /** === Media & Text === */
 
-.wp-block[data-type="core/media-text"] .wp-block-media-text {
+.wp-block[data-type="core/media-text"] {
 
-	background: $color__background-screen;
-	border-radius: 3px;
-	overflow: hidden;
+	.wp-block-media-text {
+		background: $color__background-screen;
+		border-radius: 3px;
+		overflow: hidden;
+	}
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		text-align: left;
+	.wp-block-heading {
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			text-align: inherit;
+			margin-bottom: $size__spacing-unit;
+			margin-top: $size__spacing-unit;
+		}
+	}
+
+	& + [data-type="core/media-text"] {
+		margin-top: -32px;
+	}
+
+	a {
+		color: inherit;
 	}
 }
 

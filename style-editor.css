@@ -600,13 +600,23 @@ figcaption,
   overflow: hidden;
 }
 
-.wp-block[data-type="core/media-text"] .wp-block-media-text h1,
-.wp-block[data-type="core/media-text"] .wp-block-media-text h2,
-.wp-block[data-type="core/media-text"] .wp-block-media-text h3,
-.wp-block[data-type="core/media-text"] .wp-block-media-text h4,
-.wp-block[data-type="core/media-text"] .wp-block-media-text h5,
-.wp-block[data-type="core/media-text"] .wp-block-media-text h6 {
-  text-align: left;
+.wp-block[data-type="core/media-text"] .wp-block-heading h1,
+.wp-block[data-type="core/media-text"] .wp-block-heading h2,
+.wp-block[data-type="core/media-text"] .wp-block-heading h3,
+.wp-block[data-type="core/media-text"] .wp-block-heading h4,
+.wp-block[data-type="core/media-text"] .wp-block-heading h5,
+.wp-block[data-type="core/media-text"] .wp-block-heading h6 {
+  text-align: inherit;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.wp-block[data-type="core/media-text"] + [data-type="core/media-text"] {
+  margin-top: -32px;
+}
+
+.wp-block[data-type="core/media-text"] a {
+  color: inherit;
 }
 
 /** === Table === */

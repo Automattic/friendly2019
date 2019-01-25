@@ -2402,11 +2402,6 @@ body.page .main-navigation {
   font-weight: 500;
 }
 
-.post .entry .entry-meta, .post
-.entry .entry-footer {
-  text-align: center;
-}
-
 .entry .entry-meta > span,
 .entry .entry-footer > span {
   margin-left: 1rem;
@@ -2456,6 +2451,11 @@ body.page .main-navigation {
   .entry .entry-footer {
     max-width: calc(6 * (100vw / 12) - 28px);
   }
+}
+
+.entry.post .entry-meta,
+.entry.post .entry-footer {
+  text-align: center;
 }
 
 .entry .post-thumbnail {
