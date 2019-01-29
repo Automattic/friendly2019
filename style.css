@@ -1935,7 +1935,7 @@ body.page .main-navigation {
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-  padding: 1.25rem 1rem .75rem;
+  padding: 1.5em 1em 1em;
 }
 
 .site-header.featured-image {
@@ -1952,11 +1952,11 @@ body.page .main-navigation {
 @media only screen and (min-width: 768px) {
   .site-header {
     margin: 0;
-    padding: 2.5rem 0 1.5rem;
+    padding: 3rem 0 2rem;
   }
   .site-header.featured-image {
     min-height: 100vh;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -2156,21 +2156,22 @@ body.page .main-navigation {
 }
 
 .site-header.featured-image .site-featured-image .entry-header {
-  margin: calc(4 * 1rem) 0 0;
+  margin-top: calc( 4 * 1rem);
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
   /* Entry meta */
 }
 
 @media only screen and (min-width: 768px) {
   .site-header.featured-image .site-featured-image .entry-header {
-    margin: calc(4 * 1rem) auto 0;
-    max-width: calc(8 * (100vw / 12) - 28px);
+    margin-left: calc(10% + 60px);
+    margin-right: calc(10% + 60px);
   }
 }
 
-@media only screen and (min-width: 1168px) {
-  .site-header.featured-image .site-featured-image .entry-header {
-    max-width: calc(6 * (100vw / 12) - 28px);
-  }
+.site-header.featured-image .site-featured-image .entry-header .entry-title {
+  text-align: center;
 }
 
 .site-header.featured-image .site-featured-image .entry-header .entry-title:before {
@@ -2179,6 +2180,7 @@ body.page .main-navigation {
 
 .site-header.featured-image .site-featured-image .entry-header .entry-meta {
   font-weight: 500;
+  text-align: center;
 }
 
 .site-header.featured-image .site-featured-image .entry-header .entry-meta > span {
@@ -2214,18 +2216,7 @@ body.page .main-navigation {
   .site-header.featured-image .site-featured-image .entry-header.has-discussion .entry-meta {
     display: flex;
     position: relative;
-  }
-  .site-header.featured-image .site-featured-image .entry-header.has-discussion .entry-title {
-    padding-right: calc(1 * (100vw / 12) + 1rem);
-  }
-  .site-header.featured-image .site-featured-image .entry-header.has-discussion .entry-meta .comment-count {
-    position: absolute;
-    right: 0;
-  }
-  .site-header.featured-image .site-featured-image .entry-header.has-discussion .entry-meta .discussion-avatar-list {
-    display: block;
-    position: absolute;
-    bottom: 100%;
+    justify-content: center;
   }
 }
 
@@ -2371,23 +2362,13 @@ body.page .main-navigation {
 .entry .entry-header {
   margin: calc(3 * 1rem) 1rem 1rem;
   position: relative;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
   .entry .entry-header {
-    margin: calc(3 * 1rem) auto 1rem;
-    max-width: calc(8 * (100vw / 12) - 28px);
+    margin: calc(3 * 1rem) calc(10% + 60px) 1rem;
   }
-}
-
-@media only screen and (min-width: 1168px) {
-  .entry .entry-header {
-    max-width: calc(6 * (100vw / 12) - 28px);
-  }
-}
-
-.entry.post .entry-header {
-  text-align: center;
 }
 
 .entry .entry-title {
@@ -2442,6 +2423,7 @@ body.page .main-navigation {
 .entry .entry-meta,
 .entry .entry-footer {
   margin: calc(2 * 1rem) 1rem 1rem;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -2457,11 +2439,6 @@ body.page .main-navigation {
   .entry .entry-footer {
     max-width: calc(6 * (100vw / 12) - 28px);
   }
-}
-
-.entry.post .entry-meta,
-.entry.post .entry-footer {
-  text-align: center;
 }
 
 .entry .post-thumbnail {
@@ -3104,6 +3081,7 @@ body.page .main-navigation {
 .search .page-header,
 .error404 .page-header {
   margin: calc(3 * 1rem) 1rem 1rem;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -3118,8 +3096,8 @@ body.page .main-navigation {
 .search .page-header .page-title,
 .error404 .page-header .page-title {
   color: #0d1b24;
+  display: inline;
   letter-spacing: normal;
-  text-align: center;
 }
 
 .archive .page-header .page-title:before,
@@ -3136,7 +3114,6 @@ body.page .main-navigation {
 .error404 .page-header .page-description {
   display: inherit;
   clear: both;
-  text-align: center;
 }
 
 .archive .page-header .search-term:after,

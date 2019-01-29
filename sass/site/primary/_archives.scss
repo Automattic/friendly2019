@@ -3,6 +3,7 @@
 .error404 .page-header {
 
 	margin: calc(3 * #{ $size__spacing-unit}) $size__spacing-unit $size__spacing-unit;
+	text-align: center;
 
 	@include media(tablet) {
 		margin: calc(3 * #{ $size__spacing-unit}) $size__site-margins $size__spacing-unit;
@@ -11,8 +12,8 @@
 	.page-title {
 
 		color: $color__text-dark;
+		display: inline;
 		letter-spacing: normal;
-		text-align: center;
 
 		&:before {
 			display: none;
@@ -23,7 +24,6 @@
 	.page-description {
 		display: inherit;
 		clear: both;
-		text-align: center;
 
 		&:after {
 			content: ".";
