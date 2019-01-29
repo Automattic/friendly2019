@@ -1,9 +1,9 @@
 <?php
 /**
- * Friendly 2019: Customizer
+ * Friendly Business: Customizer
  *
  * @package WordPress
- * @subpackage Friendly 2019
+ * @subpackage Friendly Business
  * @since 1.0.0
  */
 
@@ -12,7 +12,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function friendly2019_customize_register( $wp_customize ) {
-    $wp_customize->get_control( 'header_text' )->label = __( 'Display Site Title', 'friendly2019' );
+function friendly_business_customize_register( $wp_customize ) {
+    $wp_customize->get_control( 'header_text' )->label = __( 'Display Site Title', 'friendly-business' );
 }
-add_action( 'customize_register', 'friendly2019_customize_register' );
+add_action( 'customize_register', 'friendly_business_customize_register' );

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: Friendly (Twenty Nineteen)
+Theme Name: Friendly Business
 Theme URI: https://github.com/WordPress/twentynineteen
 Author: the WordPress team
 Author URI: https://wordpress.org/
@@ -10,7 +10,7 @@ Requires at least: WordPress 4.9.6
 Version: 1.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: twentynineteen
+Text Domain: friendly-business
 Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
@@ -3075,6 +3075,7 @@ body.page .main-navigation {
 .search .page-header,
 .error404 .page-header {
   margin: calc(3 * 1rem) 1rem 1rem;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
